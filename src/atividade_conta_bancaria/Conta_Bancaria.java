@@ -9,7 +9,7 @@ public class Conta_Bancaria {
 	
 	public Conta_Bancaria() {
 		setNumeroConta(-1);
-		setSaldo(-1);
+		setSaldo(0);
 		
 	}
 
@@ -38,7 +38,7 @@ public class Conta_Bancaria {
 	public boolean transferencia(Conta_Bancaria destino, double valor) {
 		if (valor <= getSaldo()) {
 			setSaldo(getSaldo() - valor);
-			destino.deposito(valor);;
+			destino.deposito(valor);
 			return true;
 		}
 		return false;

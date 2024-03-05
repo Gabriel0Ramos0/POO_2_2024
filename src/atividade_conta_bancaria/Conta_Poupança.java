@@ -7,6 +7,10 @@ public class Conta_Poupança extends Conta_Bancaria{
 	private final int limiteMensal = 5;
 	private int quantidadeDeSaquesMensais;
 	private int mes;
+	
+	public Conta_Poupança() {
+		super();
+	}
 
 	public Conta_Poupança(int numeroConta, double saldo, int saquesMensais, int mes) {
 		super(numeroConta, saldo);
@@ -17,7 +21,7 @@ public class Conta_Poupança extends Conta_Bancaria{
 	@Override
 	public boolean saque(double valor) {
 		LocalDate hoje = LocalDate.now();
-		if (hoje.getMonthValue() != mes) {
+		if (hoje.getMonthValue() != getMes()) {
 			quantidadeDeSaquesMensais = 0; 
 			mes = hoje.getMonthValue(); 
 		}

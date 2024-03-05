@@ -2,8 +2,12 @@ package atividade_conta_bancaria;
 
 public class Conta_Especial extends Conta_Bancaria{
 
-	private double limite;
+	public double limite;
 	
+	public Conta_Especial() {
+		super();
+	}
+
 	public Conta_Especial(int numeroConta, double saldo, double limite) {
 		super(numeroConta, saldo);
 		setLimite(limite);
@@ -11,7 +15,7 @@ public class Conta_Especial extends Conta_Bancaria{
 
 	@Override
 	public boolean saque(double valor) {
-		if (valor <= saldo + limite) {
+		if (valor <= saldo + getLimite()) {
 			setSaldo(getSaldo() - valor);
 			return true;
 		}
