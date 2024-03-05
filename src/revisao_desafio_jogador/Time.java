@@ -37,7 +37,6 @@ public class Time {
 	
 	public int golsdoTime() {
 		int qtGols = 0;
-		Jogador artilheiro = new Jogador();
 		for (Jogador jogador : jogadores) {
 			qtGols += jogador.getGols();
 		}
