@@ -1,19 +1,17 @@
 package revisao_desafio_jogador.testes;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.ArrayList;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import revisao_desafio_jogador.Campeonato;
 import revisao_desafio_jogador.Jogador;
 import revisao_desafio_jogador.Time;
 
 class CampeonatoTeste {
 
-ArrayList<Time> times = new ArrayList<Time>();
+	ArrayList<Time> times = new ArrayList<Time>();
+	Campeonato campeonato = new Campeonato();
 	
 	@BeforeEach
 	void inicializa() {
@@ -32,8 +30,8 @@ ArrayList<Time> times = new ArrayList<Time>();
 		jogadores2.add(new Jogador ("N10", 10, 10));
 		Time t2 = new Time("Time 2", jogadores2); 
 		ArrayList<Jogador> jogadores3 = new ArrayList<Jogador>();
-		jogadores3.add(new Jogador ("N11", 99, 0));
-		jogadores3.add(new Jogador ("N12", 99, 0));
+		jogadores3.add(new Jogador ("xxx", 99, 0));
+		jogadores3.add(new Jogador ("zzz", 99, 0));
 		Time t3 = new Time("Time 3", jogadores3);
 		times = new ArrayList<Time>();
 		times.add(t1);

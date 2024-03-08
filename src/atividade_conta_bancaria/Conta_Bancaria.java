@@ -2,15 +2,12 @@ package atividade_conta_bancaria;
 
 public class Conta_Bancaria {
 	
-	
 	public int numeroConta;
 	public double saldo;
-	
 	
 	public Conta_Bancaria() {
 		setNumeroConta(-1);
 		setSaldo(0);
-		
 	}
 
 	public Conta_Bancaria(int numeroConta, double saldo) {

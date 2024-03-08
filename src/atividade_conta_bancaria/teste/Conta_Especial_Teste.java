@@ -5,15 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import atividade_conta_bancaria.Conta_Bancaria;
-import atividade_conta_bancaria.Conta_Corrente;
 import atividade_conta_bancaria.Conta_Especial;
 
 public class Conta_Especial_Teste {
 	
-	Conta_Bancaria conta1;
-	Conta_Bancaria conta2;
+	Conta_Especial conta1;
+	Conta_Especial conta2;
 
     @BeforeEach
     public void inicializar() {
@@ -23,13 +20,13 @@ public class Conta_Especial_Teste {
 	
 	@Test
     public void ConstrutorTeste() {
-        int numeroConta = 12345;
-        double saldo = 1000.0;
 
-        Conta_Corrente conta = new Conta_Corrente(numeroConta, saldo);
-
-        assertEquals(numeroConta, conta.getNumeroConta());
-        assertEquals(saldo, conta.getSaldo(), 0.0);
+        assertEquals(123, conta1.getNumeroConta());
+        assertEquals(1000.0, conta1.getSaldo(), 0.0);
+        assertEquals(500, conta1.getLimite());
+        assertEquals(-1, conta2.getNumeroConta());
+        assertEquals(0.0, conta2.getSaldo(), 0.0);
+        assertEquals(0, conta2.getLimite());
     }
 	
 	@Test
@@ -38,5 +35,10 @@ public class Conta_Especial_Teste {
         assertEquals(500, conta1.getSaldo());
         assertFalse(conta1.saque(1500.0)); 
         assertFalse(conta2.saque(1500.0)); 
+        conta2.deposito(1500);
+        conta2.setLimite(600);
+        conta2.saque(700);
+        assertFalse(conta2.saque(700));
+        assertEquals(1500, conta2.getSaldo());
     }
 }

@@ -10,12 +10,10 @@ class Conta_Corrente_Teste {
 
 	@Test
     public void testConstrutor() {
-        int numeroConta = 12345;
-        double saldo = 1000.0;
 
-        Conta_Corrente conta = new Conta_Corrente(numeroConta, saldo);
+        Conta_Corrente conta = new Conta_Corrente(12345, 1000);
 
-        assertEquals(numeroConta, conta.getNumeroConta());
-        assertEquals(saldo, conta.getSaldo(), 0.0);
+        assertEquals(12345, conta.getNumeroConta());
+        assertEquals(1000.0, conta.getSaldo(), 0.0);
     }
 }

@@ -15,7 +15,7 @@ public class Conta_Especial extends Conta_Bancaria{
 
 	@Override
 	public boolean saque(double valor) {
-		if (valor <= saldo + getLimite()) {
+		if (valor <= saldo && valor <= getLimite()) {
 			setSaldo(getSaldo() - valor);
 			return true;
 		}
