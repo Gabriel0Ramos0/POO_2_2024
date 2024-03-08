@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Conta_Poupança extends Conta_Bancaria{
 	
 	private final int limiteMensal = 5;
-	private int quantidadeDeSaquesMensais;
+	private int SaquesMensais;
 	private int mes;
 	
 	public Conta_Poupança() {
@@ -22,23 +22,23 @@ public class Conta_Poupança extends Conta_Bancaria{
 	public boolean saque(double valor) {
 		LocalDate hoje = LocalDate.now();
 		if (hoje.getMonthValue() != getMes()) {
-			quantidadeDeSaquesMensais = 0; 
+			SaquesMensais = 0; 
 			mes = hoje.getMonthValue(); 
 		}
-		if (quantidadeDeSaquesMensais < limiteMensal && valor <= getSaldo()) {
+		if (SaquesMensais < limiteMensal && valor <= getSaldo()) {
 			setSaldo(getSaldo() - valor);
-			quantidadeDeSaquesMensais++;
+			SaquesMensais++;
 			return true;
 		}
 		return false;
 	}
 
 	public int getSaquesMensais() {
-		return quantidadeDeSaquesMensais;
+		return SaquesMensais;
 	}
 
-	public void setSaquesMensais(int quantidadeDeSaquesMensais) {
-		this.quantidadeDeSaquesMensais = quantidadeDeSaquesMensais;
+	public void setSaquesMensais(int SaquesMensais) {
+		this.SaquesMensais = SaquesMensais;
 	}
 
 	public int getMes() {

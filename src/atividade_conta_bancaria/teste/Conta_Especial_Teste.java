@@ -19,7 +19,7 @@ public class Conta_Especial_Teste {
     }
 	
 	@Test
-    public void ConstrutorTeste() {
+    public void construtorTeste() {
 
         assertEquals(123, conta1.getNumeroConta());
         assertEquals(1000.0, conta1.getSaldo(), 0.0);
@@ -30,7 +30,7 @@ public class Conta_Especial_Teste {
     }
 	
 	@Test
-    public void SaqueTeste() {
+    public void saqueTeste() {
         conta1.saque(500);
         assertEquals(500, conta1.getSaldo());
         assertFalse(conta1.saque(1500.0)); 
@@ -40,5 +40,12 @@ public class Conta_Especial_Teste {
         conta2.saque(700);
         assertFalse(conta2.saque(700));
         assertEquals(1500, conta2.getSaldo());
+    }
+	
+	@Test
+    public void transferenciaTeste() {
+    	conta1.transferencia(conta2, 700);
+    	assertEquals(300, conta1.getSaldo());
+    	assertEquals(700, conta2.getSaldo());
     }
 }
