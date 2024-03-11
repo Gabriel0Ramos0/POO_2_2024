@@ -54,5 +54,6 @@ class Conta_Bancaria_Teste {
         conta2.transferencia(conta1, 100);
         assertEquals(400, conta2.getSaldo());
         assertFalse(conta2.transferencia(conta1, 500));
+        //transferir pra uma conta inexistente
     }
 }

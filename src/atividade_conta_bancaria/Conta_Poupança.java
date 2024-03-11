@@ -20,11 +20,13 @@ public class Conta_Poupança extends Conta_Bancaria{
 
 	@Override
 	public boolean saque(double valor) {
+		//Verifica o mês e atualiza se for diferente
 		LocalDate hoje = LocalDate.now();
 		if (hoje.getMonthValue() != getMes()) {
 			SaquesMensais = 0; 
 			mes = hoje.getMonthValue(); 
-		}
+		}		
+		//Pode realizar o saque até o limite mensal
 		if (SaquesMensais < limiteMensal && valor <= getSaldo()) {
 			setSaldo(getSaldo() - valor);
 			SaquesMensais++;

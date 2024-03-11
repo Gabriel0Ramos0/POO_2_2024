@@ -30,14 +30,13 @@ public class Conta_Especial_Teste {
     }
 	
 	@Test
-    public void saqueTeste() {
+    public void saqueComLimiteTeste() {
         conta1.saque(500);
         assertEquals(500, conta1.getSaldo());
         assertFalse(conta1.saque(1500.0)); 
         assertFalse(conta2.saque(1500.0)); 
         conta2.deposito(1500);
         conta2.setLimite(600);
-        conta2.saque(700);
         assertFalse(conta2.saque(700));
         assertEquals(1500, conta2.getSaldo());
     }

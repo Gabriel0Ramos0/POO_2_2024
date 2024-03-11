@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import atividade_conta_bancaria.Banco;
 import atividade_conta_bancaria.Conta_Bancaria;
+import atividade_conta_bancaria.Conta_Corrente;
 
 class Banco_Teste {
 	
@@ -16,12 +17,13 @@ class Banco_Teste {
     Conta_Bancaria conta1;
     Conta_Bancaria conta2;
     Conta_Bancaria conta3;
+    Conta_Corrente contaCorrente;
 	
 	@BeforeEach
 	public void inicializar() {
 		banco = new Banco();
-        conta1 = new Conta_Bancaria(123, 1000.0);
-        conta2 = new Conta_Bancaria(321, 2000.0);
+        conta1 = new Conta_Bancaria(1, 1000.0);
+        conta2 = new Conta_Bancaria(2, 2000.0);
         conta3 = new Conta_Bancaria();
 	}
 
