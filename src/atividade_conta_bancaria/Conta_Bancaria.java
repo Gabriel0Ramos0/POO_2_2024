@@ -33,10 +33,13 @@ public class Conta_Bancaria {
     }
 	
 	public boolean transferencia(Conta_Bancaria destino, double valor) {
-		if (valor <= getSaldo()) {
-			setSaldo(getSaldo() - valor);
-			destino.deposito(valor);
-			return true;
+		if (destino != null) {
+			if (valor <= getSaldo()) {
+				setSaldo(getSaldo() - valor);
+				destino.deposito(valor);
+				return true;
+			}
+			return false;
 		}
 		return false;
 	}

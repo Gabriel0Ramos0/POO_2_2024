@@ -42,6 +42,14 @@ public class Conta_Especial_Teste {
     }
 	
 	@Test
+	public void toStringTeste() {
+		String retorno1 = conta1.toString();
+    	String retorno2 = conta2.toString();
+		assertEquals("Numero da Conta = " + "123" + "\nSaldo = " + "1000.0" + "\nLimite = " + "500.0", retorno1);
+		assertEquals("Numero da Conta = " + "-1" + "\nSaldo = " + "0.0" + "\nLimite = " + "0.0", retorno2);
+	}
+	
+	@Test
     public void transferenciaTeste() {
     	conta1.transferencia(conta2, 700);
     	assertEquals(300, conta1.getSaldo());

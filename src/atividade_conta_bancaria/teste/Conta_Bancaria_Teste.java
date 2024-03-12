@@ -15,7 +15,7 @@ class Conta_Bancaria_Teste {
 	Conta_Bancaria conta3;
 
     @BeforeEach
-    public void inicializar() {
+    public void inicializar() {    	
         conta1 = new Conta_Bancaria(1, 1000.0);
         conta2 = new Conta_Bancaria();
         conta3 = new Conta_Bancaria(2, 1500.0);
@@ -54,6 +54,6 @@ class Conta_Bancaria_Teste {
         conta2.transferencia(conta1, 100);
         assertEquals(400, conta2.getSaldo());
         assertFalse(conta2.transferencia(conta1, 500));
-        //transferir pra uma conta inexistente
+        assertFalse(conta1.transferencia(null, 100));
     }
 }

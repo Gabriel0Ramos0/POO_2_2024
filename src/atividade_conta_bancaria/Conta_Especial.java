@@ -21,6 +21,11 @@ public class Conta_Especial extends Conta_Bancaria{
 		}
 		return false;
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString()+"\nLimite = "+getLimite();
+	}
 
 	public double getLimite() {
 		return limite;

@@ -10,21 +10,24 @@ import org.junit.jupiter.api.Test;
 import atividade_conta_bancaria.Banco;
 import atividade_conta_bancaria.Conta_Bancaria;
 import atividade_conta_bancaria.Conta_Corrente;
+import atividade_conta_bancaria.Conta_Especial;
+import atividade_conta_bancaria.Conta_Poupança;
 
 class Banco_Teste {
 	
 	Banco banco;
     Conta_Bancaria conta1;
-    Conta_Bancaria conta2;
-    Conta_Bancaria conta3;
-    Conta_Corrente contaCorrente;
+    Conta_Corrente conta2;
+    Conta_Especial conta3;
+    Conta_Poupança conta4;
 	
 	@BeforeEach
 	public void inicializar() {
 		banco = new Banco();
-        conta1 = new Conta_Bancaria(1, 1000.0);
-        conta2 = new Conta_Bancaria(2, 2000.0);
-        conta3 = new Conta_Bancaria();
+        conta1 = new Conta_Bancaria();
+        conta2 = new Conta_Corrente(2, 2000.0);
+        conta3 = new Conta_Especial(3, 1000.0, 500);
+        conta4 = new Conta_Poupança(4, 1500.0, 0, 0);
 	}
 
 	 @Test
@@ -40,15 +43,15 @@ class Banco_Teste {
 	 
 	 @Test
 	 public void construtorComArrayListTeste() {
-		 conta1 = new Conta_Bancaria(123, 1000.0);
-		 conta2 = new Conta_Bancaria(321, 2000.0);
+		 conta2 = new Conta_Corrente(2, 2000.0);
+	     conta3 = new Conta_Especial(3, 1000.0, 500);
 		        
 		 ArrayList<Conta_Bancaria> contas = new ArrayList<>();
 		 Banco banco = new Banco(contas);
-		 banco.adicionarConta(conta1);
 		 banco.adicionarConta(conta2);
+		 banco.adicionarConta(conta3);
 		 assertEquals(2, banco.getContas().size());
-		 assertTrue(banco.getContas().contains(conta1));
 		 assertTrue(banco.getContas().contains(conta2));
+		 assertTrue(banco.getContas().contains(conta3));
 	 }
 }
