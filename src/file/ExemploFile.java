@@ -1,0 +1,38 @@
+package file;
+
+import java.io.File;
+
+import javax.swing.JOptionPane;
+
+public class ExemploFile {
+	
+	public static void main(String[] args) {
+		String menu = "1 - Listar\n"
+				+ "2 - Apagar Todos\n"
+				+ "3 - Sair";
+		
+		int op = 0;
+		File[] arqs = null;
+		do {
+			op = Integer.parseInt(JOptionPane.showInputDialog(menu));			
+			if(op == 1) {
+				String dir = JOptionPane.showInputDialog("Path");
+				File dire = new File(dir);
+				if (dire.isDirectory()) {
+					arqs = dire.listFiles();
+					for (File f : arqs) {
+						System.out.println(f.getName() + " - " + f.length());
+					}
+				} else {
+					System.out.println("Caminho Inválido");
+				}
+			}
+			
+			if (op == 2) {
+				for (File f : arqs) {
+					f.delete();
+				}
+			}
+		} while (op!=3);
+	}
+}
