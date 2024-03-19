@@ -1,4 +1,4 @@
-package brincadeira_com_arquivos;
+package atividade_de_leitura_de_arquivos;
 
 import java.io.BufferedReader;
 import java.io.File;
