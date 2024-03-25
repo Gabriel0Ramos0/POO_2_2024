@@ -1,34 +1,25 @@
 package atividade_de_leitura_de_arquivos;
 
 public class Perguntas {
-	
-	private String questao;
-	private String Respostas;
-	
-	public Perguntas() {
-		
-	}
+    private String pergunta;
+    private boolean resposta;
 
-	public Perguntas(String questao, String respostas) {
-		super();
-		this.questao = questao;
-		Respostas = respostas;
-	}
+    public Perguntas(String pergunta, boolean resposta) {
+        this.pergunta = pergunta;
+        this.resposta = resposta;
+    }
+    
+    @Override
+    public String toString() {
+        return pergunta;
+    }
 
-	public String getQuestao() {
-		return questao;
-	}
+    public String getPergunta() {
+        return pergunta;
+    }
 
-	public void setQuestao(String questao) {
-		this.questao = questao;
-	}
+    public boolean getResposta() {
+        return resposta;
+    }
 
-	public String getRespostas() {
-		return Respostas;
-	}
-
-	public void setRespostas(String respostas) {
-		Respostas = respostas;
-	}
-	
 }
