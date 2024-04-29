@@ -1,0 +1,10 @@
+1,O carbono é o elemento mais comum encontrado no corpo humano,erro
+2,O ácido cítrico é encontrado principalmente em frutas cítricas,acerto
+3,O número 1 é um número par,acerto
+4,A Terra é o maior planeta do sistema solar,acerto
+5,O ouro é um metal extremamente raro na Terra,acerto
+6,A gravidade na Lua é aproximadamente igual à gravidade na Terra,acerto
+7,O oxigênio representa cerca de 21% da atmosfera terrestre,erro
+8,A Antártida é o continente mais populoso do mundo,acerto
+9,O deserto do Saara é o maior do mundo,acerto
+10,Os cangurus são nativos da África,acerto

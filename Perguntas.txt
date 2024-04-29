@@ -1,0 +1,50 @@
+A Terra é redonda, Verdadeiro
+O Sol é uma estrela, Verdadeiro
+O oxigênio é necessário para a respiração humana, Verdadeiro
+O gelo é feito de água congelada, Verdadeiro
+O número 1 é um número par, Falso
+A Lua emite luz própria, Falso
+A eletricidade é uma forma de energia renovável, Falso
+As plantas realizam fotossíntese para produzir oxigênio, Verdadeiro
+O som não pode se propagar no vácuo, Verdadeiro
+O diamante é o mineral mais raro da Terra, Falso
+A água ferve a 200°C ao nível do mar, Falso
+O planeta Marte é habitável para os seres humanos sem trajes especiais, Falso
+As bactérias são seres vivos unicelulares, Verdadeiro
+O átomo é a menor unidade de matéria, Verdadeiro
+O Brasil é um país na África, Falso
+A clorofila é responsável pela cor verde das plantas, Verdadeiro
+A água é um composto químico formado por hidrogênio e oxigênio, Verdadeiro
+O deserto do Saara é o maior do mundo, Verdadeiro
+O oxigênio representa cerca de 21% da atmosfera terrestre, Verdadeiro
+O ser humano pode sobreviver sem água por mais tempo do que sem comida, Falso
+O ouro é um metal extremamente raro na Terra, Falso
+A Terra é o maior planeta do sistema solar, Falso
+A gravidade na Lua é aproximadamente igual à gravidade na Terra, Falso
+O zero é um número par, Verdadeiro
+O átomo de hidrogênio consiste apenas em um próton e um elétron, Verdadeiro
+O DNA é composto por três cadeias de nucleotídeos, Falso
+A energia solar é a fonte primária de energia para todos os seres vivos na Terra, Verdadeiro
+O petróleo é uma fonte de energia renovável, Falso
+A Antártida é o continente mais populoso do mundo, Falso
+O ácido clorídrico é uma substância altamente básica, Falso
+O som se propaga mais rapidamente na água do que no ar, Verdadeiro
+O carbono é o elemento mais comum encontrado no corpo humano, Verdadeiro
+O sistema nervoso central inclui o cérebro e a medula espinhal, Verdadeiro
+As plantas carnívoras se alimentam de insetos, Verdadeiro
+O ferro é um bom condutor de eletricidade, Verdadeiro
+O ácido sulfúrico é uma substância altamente corrosiva, Verdadeiro
+O rio Amazonas é o mais longo do mundo, Verdadeiro
+O ácido acético é o principal componente do vinagre, Verdadeiro
+Os cangurus são nativos da África, Falso
+O álcool etílico é uma substância inflamável, Verdadeiro
+A França é o maior país do mundo em área territorial, Falso
+O algodão é uma fibra sintética, Falso
+A água atinge seu ponto de densidade máxima quando congelada, Verdadeiro
+O tungstênio é o metal mais leve conhecido, Falso
+A batata é uma raiz, Falso
+O ácido cítrico é encontrado principalmente em frutas cítricas, Verdadeiro
+O oxigênio é o elemento mais abundante na crosta terrestre, Falso
+O trovão é causado pelo atrito de nuvens, Verdadeiro
+O mês de fevereiro tem 31 dias, Falso
+O diamante pode ser facilmente riscado por uma unha humana, Falso

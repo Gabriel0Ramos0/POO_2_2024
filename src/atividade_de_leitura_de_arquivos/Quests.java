@@ -1,10 +1,15 @@
 package atividade_de_leitura_de_arquivos;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
 import javax.swing.JOptionPane;
 
 public class Quests {
     private static Arquivos_Perguntas arquivo = new Arquivos_Perguntas("Perguntas.txt");
     private static Perguntas perguntaAtual;
+    private static boolean resultado;
+    private static int count = 0;
     private static int score =0;
 
     public static void main(String[] args) {
@@ -17,6 +22,8 @@ public class Quests {
             op = Integer.parseInt(JOptionPane.showInputDialog(menu));
 
             if (op == 1) {
+            	score = 0;
+            	limparArquivo();
             	for (int i = 0; i < 10; i++) {
                     perguntaAtual = arquivo.sortearPergunta();
                     if (perguntaAtual != null) {
@@ -32,7 +39,9 @@ public class Quests {
                                 opcoes[0]);
 
                         boolean respostaUsuario = (respostaIndex == 0);
-                        boolean resultado = arquivo.verificarResposta(perguntaAtual, respostaUsuario);
+                        resultado = arquivo.verificarResposta(perguntaAtual, respostaUsuario);
+                        count++;
+                        gravaResultado();
                         if (resultado) {
                             JOptionPane.showMessageDialog(null, "Resposta correta!");
                             score++;
@@ -47,15 +56,44 @@ public class Quests {
             }
             if (op == 2) {
             	if (score > 0) {
-            		JOptionPane.showMessageDialog(null, "Pontuação Final: " + score + " / 10");
+            		JOptionPane.showMessageDialog(null, "Pontuação Final: " + score + " / 10"
+            				+ "\nRespostas\n"
+            				+ arquivo.lerRespostas());
             	} else {
             		JOptionPane.showMessageDialog(null, "Score = 0, jogue uma rodada para aumentá-lo!");
             	}
             }            
             if (op == 3) {
-            	//arquivo.listarPerguntas();
             	JOptionPane.showMessageDialog(null, "Saindo...");
             }            
         } while (op != 3);
     }
+    
+    public static void limparArquivo() {
+        try {
+            FileWriter fw = new FileWriter("respostas.txt", false);
+            fw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void gravaResultado() {
+		try {
+			FileWriter fw = new FileWriter("respostas.txt", true);
+			BufferedWriter bw = new BufferedWriter(fw);
+				bw.append(
+				    (count) +", "+
+					perguntaAtual + ", ");
+				if (resultado == true) {
+					bw.append("acerto\n");
+				} else {
+					bw.append("erro\n");
+				}
+			bw.close();
+			fw.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

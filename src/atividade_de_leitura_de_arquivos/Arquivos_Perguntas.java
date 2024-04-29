@@ -48,17 +48,22 @@ public class Arquivos_Perguntas {
         return pergunta.getResposta() == respostaUsuario;
     }
     
-    /* Testando método de arquivo_Perguntas.
-     * Usar só pra verificar como está salvando as perguntas
-     */
-    public void listarPerguntas() {
-        System.out.println("Lista de Perguntas e Respostas:");
-        for (Perguntas pergunta : perguntas) {
-            System.out.println("Pergunta: " + pergunta.getPergunta());
-            System.out.println("Resposta: " + pergunta.getResposta());
-            System.out.println("-------------------------");
-        }
-    }
+    public String lerRespostas() {
+		String ret = "";
+		try {
+			FileReader fr = new FileReader("respostas.txt");
+			BufferedReader br = new BufferedReader(fr);
+			String linha = "";
+			while ((linha = br.readLine()) != null) {
+				ret += linha + "\n";
+			}
+			br.close();
+			fr.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return ret;
+	}
 
     public ArrayList<Perguntas> getPerguntas() {
         return perguntas;
